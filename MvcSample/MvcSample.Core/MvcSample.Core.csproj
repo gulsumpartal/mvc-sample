@@ -50,6 +50,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Migrations\201707271119406_InitializeDatabase.cs" />
+    <Compile Include="Migrations\201707271119406_InitializeDatabase.Designer.cs">
+      <DependentUpon>201707271119406_InitializeDatabase.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="MvcSampleContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -57,6 +61,17 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MvcSample.Domain\MvcSample.Domain.csproj">
+      <Project>{86E651CC-C0F9-48C4-88CE-C69C5D53044E}</Project>
+      <Name>MvcSample.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201707271119406_InitializeDatabase.resx">
+      <DependentUpon>201707271119406_InitializeDatabase.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
