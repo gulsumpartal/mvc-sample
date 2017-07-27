@@ -10,14 +10,16 @@
     <title>Login</title>
 </head>
 <body>
-    <div>
-        <input type="text" placeholder="username..." />
-    </div>
-    <div>
-        <input type="password" placeholder="password..." />
-    </div>
-    <div>
-        <button type="button">Login</button>
-    </div>
+
+    <form id="frmLogin">
+        <input type="text" name="Username" placeholder="username..." />
+
+        <input type="password" name="Password" placeholder="password..." />
+    </form>
+
+    <button id="btnLogin" type="button" onclick="authController.login()">Login</button>
+
+    <script src="~/assets/js/jquery/jquery-3.1.1.min.js"></script>
+    <script src="~/assets/js/controllers/authController.js"></script>
 </body>
 </html>
