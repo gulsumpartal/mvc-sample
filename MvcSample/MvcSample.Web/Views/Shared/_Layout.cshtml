@@ -7,8 +7,13 @@
     <title>Mvc Sample Application</title>
 </head>
 <body>
-    <section>
+
+    @{Html.RenderPartial("_Header");}
+
+    <section style="height: 500px; border: 1px solid black">
         @RenderBody()
     </section>
+
+    @{Html.RenderPartial("_Footer");}
 </body>
 </html>
